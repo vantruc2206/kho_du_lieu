@@ -1,0 +1,23 @@
+# Build artifacts
+bin/
+obj/
+
+# Visual Studio user-specific files
+.vs/
+*.user
+
+# SSIS deployment files
+*.ispac
+
+# Sensitive / local config - do not share passwords or connection strings
+*.conmgr
+
+# Large data files - upload separately or share via link
+*.csv
+*.xlsx
+*.xls
+
+# OS-generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
