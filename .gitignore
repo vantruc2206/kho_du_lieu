@@ -1,0 +1,25 @@
+# Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+bin/
+obj/
+*.ispac
+*.bak
+
+# Large data files (> 100MB exceeds GitHub limit)
+*.csv
+data/2008-2022.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store

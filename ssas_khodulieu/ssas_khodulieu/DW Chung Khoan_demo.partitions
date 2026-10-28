@@ -1,0 +1,105 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e1204aa9-7ee7-4ad3-8f3a-7a5fe6f1b74d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW Chung Khoan_demo</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Dim Crisis Event</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="db55414e-1308-4add-846a-8d0df7fde5f8">
+          <ID>Dim Crisis Event</ID>
+          <Name>Dim Crisis Event</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="89ded1c7-96a0-44f1-a358-24001a4dee4d">
+            <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
+            <TableID>dbo_Dim_CrisisEvent</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Date</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f612cd47-443b-416a-91cf-5fe65af97339">
+          <ID>Dim Date</ID>
+          <Name>Dim Date</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c9d06e14-359a-4a34-8a33-d4f9a05f4c43">
+            <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
+            <TableID>dbo_Dim_Date</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Stock</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6dbb16b9-a66c-4ce2-ab5c-7719094b0681">
+          <ID>Dim Stock</ID>
+          <Name>Dim Stock</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d9defb2f-5483-4b48-bf06-6f40e4c6f7b3">
+            <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
+            <TableID>dbo_Dim_Stock</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Industry</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="db3f547e-be29-48d7-8b16-4fbec6837f78">
+          <ID>Dim Industry</ID>
+          <Name>Dim Industry</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b39e883e-bcca-447e-a61c-54837bdd7900">
+            <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
+            <TableID>dbo_Dim_Industry</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Daily Price</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2fe94414-2b5b-446a-9343-207643efce92">
+          <ID>Fact Daily Price</ID>
+          <Name>Fact Daily Price</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="320dde23-ae02-4300-b07b-70a232950e9b">
+            <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
+            <TableID>dbo_Fact_DailyPrice</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

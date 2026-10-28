@@ -1,0 +1,1373 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/26/2026 2:28:40 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-K9E4M98"
+  DTS:CreatorName="DESKTOP-K9E4M98\admin"
+  DTS:DTSID="{65454C8A-E60D-4B80-AF3C-DEFB453E13A3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1066"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{08E5F7B3-4353-479E-A9C6-38D51ED16F3F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cm_active_stocks]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{73B50BDA-FD3D-4B8D-8FD8-9BC6B1D4319A}"
+      DTS:ObjectName="cm_active_stocks">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1066"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\Kho DL\DW_DSS_Stock_Project\01_Source\active_stocks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="symbol"
+              DTS:DTSID="{3800CA92-587F-4E50-BE4B-B8BA9CD47BE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="exchange"
+              DTS:DTSID="{EF6F341F-5145-453C-AC4E-2CFFCB2A44B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="industry"
+              DTS:DTSID="{6E6245BD-D49B-468D-8939-20AC12163A7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ecosystem"
+              DTS:DTSID="{64608F63-D7CD-4AA0-9456-C7389C96C7EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="organ_name"
+              DTS:DTSID="{AE1FC3DB-2870-483A-9CD1-EB542B0FB68A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cm_all_stocks]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9A84F8AE-3916-47EB-8549-538E80909287}"
+      DTS:ObjectName="cm_all_stocks">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1066"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\Kho DL\DW_DSS_Stock_Project\01_Source\all_stocks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="time"
+              DTS:DTSID="{91B44CAF-8D3C-4E04-BA68-B0E6D4E874A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="open"
+              DTS:DTSID="{AAD793E9-F8BE-47DE-A466-0DA44300B0AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="high"
+              DTS:DTSID="{DD637C05-AF84-462F-93D1-069D257C9B00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="low"
+              DTS:DTSID="{D2370174-BCCD-4279-9DA5-D3020191DDEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="close"
+              DTS:DTSID="{6E0C36BF-6DE4-4C73-9F39-6F4DADEC299B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="volume"
+              DTS:DTSID="{204372D9-D89B-45DF-ABBB-4F5A7A899F65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="symbol"
+              DTS:DTSID="{56C068A8-1AF9-4E2B-A2D4-75CB8119838B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5DA251E7-D531-41EE-994B-DDD8D85A55E0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="StartYear">
+      <DTS:VariableValue
+        DTS:DataType="3">2010</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Extract_Prices"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A247E911-8485-4127-BAC9-00E4DC385944}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Extract_Prices"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Extract_Prices\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_Prices\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\Conditional Split.Inputs[Conditional Split Input].Columns[time]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="time"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_Prices\Conditional Split.Outputs[InScope]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="InScope"
+                  synchronousInputId="Package\DFT_Extract_Prices\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(DT_I4)[SUBSTRING](#{Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[time]},1,4) &gt;= @[User::StartYear]</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(DT_I4)SUBSTRING(time,1,4) &gt;= @[User::StartYear]</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Extract_Prices\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\DFT_Extract_Prices\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Extract_Prices\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DFT_Extract_Prices\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Prices\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Prices\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_Prices\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1066"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_Prices\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cm_all_stocks]"
+                  connectionManagerRefId="Package.ConnectionManagers[cm_all_stocks]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[time]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[time]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[time]"
+                      name="time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[open]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[open]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[open]"
+                      name="open"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[high]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[high]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[high]"
+                      name="high"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[low]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[low]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[low]"
+                      name="low"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[close]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[close]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[close]"
+                      name="close"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[volume]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[volume]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[volume]"
+                      name="volume"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[symbol]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[symbol]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[symbol]"
+                      name="symbol"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[time]"
+                      dataType="wstr"
+                      length="50"
+                      name="time" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[open]"
+                      dataType="wstr"
+                      length="50"
+                      name="open" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[high]"
+                      dataType="wstr"
+                      length="50"
+                      name="high" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[low]"
+                      dataType="wstr"
+                      length="50"
+                      name="low" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[close]"
+                      dataType="wstr"
+                      length="50"
+                      name="close" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[volume]"
+                      dataType="wstr"
+                      length="50"
+                      name="volume" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[symbol]"
+                      dataType="wstr"
+                      length="50"
+                      name="symbol" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_Prices\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgPrices]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1258</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,ROWS_PER_BATCH = 100000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_Prices\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{ECD2E64F-5B35-44EE-9575-F6E1358DC002}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-K9E4M98_SQLEXPRESS.StockStaging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[time]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="time"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[time]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[time]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[open]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="open"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[open]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[open]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[high]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="high"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[high]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[high]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[low]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="low"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[low]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[low]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[close]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="close"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[close]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[close]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[volume]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="volume"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[volume]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[volume]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[symbol]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="symbol"
+                      externalMetadataColumnId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[symbol]"
+                      lineageId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output].Columns[symbol]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[time]"
+                      dataType="wstr"
+                      length="50"
+                      name="time" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[open]"
+                      dataType="wstr"
+                      length="50"
+                      name="open" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[high]"
+                      dataType="wstr"
+                      length="50"
+                      name="high" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[low]"
+                      dataType="wstr"
+                      length="50"
+                      name="low" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[close]"
+                      dataType="wstr"
+                      length="50"
+                      name="close" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[volume]"
+                      dataType="wstr"
+                      length="50"
+                      name="volume" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[symbol]"
+                      dataType="wstr"
+                      length="50"
+                      name="symbol" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadDate]"
+                      dataType="dbTimeStamp2"
+                      name="LoadDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      dataType="wstr"
+                      length="100"
+                      name="SourceFile" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_Prices\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Prices\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Prices\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Prices\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Extract_Prices.Paths[Flat File Source Output]"
+              endId="Package\DFT_Extract_Prices\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Extract_Prices\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT_Extract_Prices.Paths[InScope]"
+              endId="Package\DFT_Extract_Prices\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="InScope"
+              startId="Package\DFT_Extract_Prices\Conditional Split.Outputs[InScope]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Extract_Stocks"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8C1C45D4-D183-46A0-8A8D-8514985DB8D7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Extract_Stocks"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Extract_Stocks\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1066"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_Stocks\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cm_active_stocks]"
+                  connectionManagerRefId="Package.ConnectionManagers[cm_active_stocks]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[symbol]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[symbol]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[symbol]"
+                      name="symbol"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[exchange]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[exchange]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[exchange]"
+                      name="exchange"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[industry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[industry]"
+                      length="200"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[industry]"
+                      name="industry"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[ecosystem]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ecosystem]"
+                      length="200"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[ecosystem]"
+                      name="ecosystem"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[organ_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[organ_name]"
+                      length="500"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[organ_name]"
+                      name="organ_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[symbol]"
+                      dataType="wstr"
+                      length="50"
+                      name="symbol" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[exchange]"
+                      dataType="wstr"
+                      length="50"
+                      name="exchange" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[industry]"
+                      dataType="wstr"
+                      length="200"
+                      name="industry" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ecosystem]"
+                      dataType="wstr"
+                      length="200"
+                      name="ecosystem" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[organ_name]"
+                      dataType="wstr"
+                      length="500"
+                      name="organ_name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_Stocks\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgStocks]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1258</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_Stocks\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{ECD2E64F-5B35-44EE-9575-F6E1358DC002}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-K9E4M98_SQLEXPRESS.StockStaging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[symbol]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="symbol"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[symbol]"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[symbol]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[exchange]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="exchange"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exchange]"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[exchange]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[industry]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="industry"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[industry]"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[industry]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ecosystem]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ecosystem"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ecosystem]"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[ecosystem]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[organ_name]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="organ_name"
+                      externalMetadataColumnId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[organ_name]"
+                      lineageId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output].Columns[organ_name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[symbol]"
+                      dataType="wstr"
+                      length="50"
+                      name="symbol" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exchange]"
+                      dataType="wstr"
+                      length="50"
+                      name="exchange" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[industry]"
+                      dataType="wstr"
+                      length="200"
+                      name="industry" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ecosystem]"
+                      dataType="wstr"
+                      length="200"
+                      name="ecosystem" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[organ_name]"
+                      dataType="wstr"
+                      length="500"
+                      name="organ_name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadDate]"
+                      dataType="dbTimeStamp2"
+                      name="LoadDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                      dataType="wstr"
+                      length="100"
+                      name="SourceFile" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_Stocks\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Stocks\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_Stocks\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_Stocks\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Extract_Stocks.Paths[Flat File Source Output]"
+              endId="Package\DFT_Extract_Stocks\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Extract_Stocks\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Truncate_Staging"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{515A0E9F-B222-4A75-B8C9-7B009117D4AB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Truncate_Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ECD2E64F-5B35-44EE-9575-F6E1358DC002}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgStocks;&#xA;TRUNCATE TABLE dbo.StgPrices;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A1A1E131-BEE1-4465-AA35-4EDB25E10DE1}"
+      DTS:From="Package\SQL_Truncate_Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_Extract_Stocks" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{99EBDFAA-D681-40B8-B32B-AAF084EA43B1}"
+      DTS:From="Package\DFT_Extract_Stocks"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT_Extract_Prices" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186.666666666667,42.6666666666667"
+          Id="Package\SQL_Truncate_Staging"
+          TopLeft="107.499995194376,36.3999982643128" />
+        <NodeLayout
+          Size="173.333333333334,42.6666666666667"
+          Id="Package\DFT_Extract_Stocks"
+          TopLeft="380.624982984737,37.2124982255698" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\DFT_Extract_Prices"
+          TopLeft="653.906220768114,34.3958316932122" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="294.166661861042,58.1395815782746">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.4583211236948,0"
+              Start="0,0"
+              End="78.9583211236948,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="78.9583211236948,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="553.958316318071,57.1374982927243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.9479044500432,0"
+              Start="0,0"
+              End="92.4479044500432,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.4479044500432,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Extract_Stocks">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\DFT_Extract_Stocks\Flat File Source"
+          TopLeft="127.499996364117,24.4999994337559" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\DFT_Extract_Stocks\OLE DB Destination"
+          TopLeft="419.999987483025,27.999999165535" />
+        <EdgeLayout
+          Id="Package\DFT_Extract_Stocks.Paths[Flat File Source Output]"
+          TopLeft="279.499996364117,47.5833326329788">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.499991118908,0"
+              Start="0,0"
+              End="132.999991118908,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="132.999991118908,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\DFT_Extract_Prices">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\DFT_Extract_Prices\Flat File Source"
+          TopLeft="91.9999972581864,31.9999990463257" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\DFT_Extract_Prices\Conditional Split"
+          TopLeft="311.49999088049,34.4999991357327" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\DFT_Extract_Prices\OLE DB Destination"
+          TopLeft="562.999983221293,32.9999990165234" />
+        <EdgeLayout
+          Id="Package\DFT_Extract_Prices.Paths[Flat File Source Output]"
+          TopLeft="243.999997258186,54.5833324243625">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.4999936223032,0"
+              Start="0,0"
+              End="59.9999936223032,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59.9999936223032,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Extract_Prices.Paths[InScope]"
+          TopLeft="467.49999088049,55.0833324094614">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.4999923408033,0"
+              Start="0,0"
+              End="87.9999923408033,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="87.9999923408033,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="25.5020469516517,5,36.9958984375,11.4140625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Extract_Stocks\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Extract_Prices\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

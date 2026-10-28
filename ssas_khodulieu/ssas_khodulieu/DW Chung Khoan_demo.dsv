@@ -1,0 +1,230 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fbe33d3a-8765-4ff6-86d0-694692f93c62" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW Chung Khoan_demo</ID>
+  <Name>DW Chung Khoan_demo</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>DW Chung Khoan_demo</DataSourceID>
+  <Schema>
+    <xs:schema id="DW_x0020_Chung_x0020_Khoan_demo" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="DW_x0020_Chung_x0020_Khoan_demo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a6fa161c-01e3-4ffb-bad1-22d531ae4e02">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_CrisisEvent" msprop:DbTableName="Dim_CrisisEvent" msprop:FriendlyName="Dim_CrisisEvent" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="d3f879cd-4f84-4410-8c42-be2532a728f7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="event_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="event_key" msprop:DbColumnName="event_key" msprop:design-time-name="c6fdcb6e-a83b-4547-af0d-eec36e491ef3" type="xs:int" />
+                  <xs:element name="event_name" msprop:FriendlyName="event_name" msprop:DbColumnName="event_name" msprop:design-time-name="c90b4243-9e63-4bde-9346-89e067507dae">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="phase" msprop:FriendlyName="phase" msprop:DbColumnName="phase" msprop:design-time-name="29de68d4-9b85-4a63-b71b-cccfd775c749">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="phase_start" msprop:FriendlyName="phase_start" msprop:DbColumnName="phase_start" msprop:design-time-name="835435bf-1938-4b54-b7b6-80d341e26182" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="phase_end" msprop:FriendlyName="phase_end" msprop:DbColumnName="phase_end" msprop:design-time-name="daf5b77e-b22c-44b3-80e0-e7261897c0df" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Date" msprop:DbTableName="Dim_Date" msprop:FriendlyName="Dim_Date" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="a1e47d4d-4f5d-4c74-a631-eaef446c7c49">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="date_key" msprop:FriendlyName="date_key" msprop:DbColumnName="date_key" msprop:design-time-name="ed723755-b875-457e-b4c3-e1f42d391f5e" type="xs:int" />
+                  <xs:element name="full_date" msprop:FriendlyName="full_date" msprop:DbColumnName="full_date" msprop:design-time-name="ea91b11f-21bc-41c8-b879-b4f592978f9e">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="day_of_week" msprop:FriendlyName="day_of_week" msprop:DbColumnName="day_of_week" msprop:design-time-name="6ca3ca33-245e-4f4a-b9a3-0f7ee286db05" type="xs:unsignedByte" />
+                  <xs:element name="month_num" msprop:FriendlyName="month_num" msprop:DbColumnName="month_num" msprop:design-time-name="a5631b0a-744c-401a-9840-eee60fe9fea7" type="xs:unsignedByte" />
+                  <xs:element name="quarter_num" msprop:FriendlyName="quarter_num" msprop:DbColumnName="quarter_num" msprop:design-time-name="af70ae51-6974-4cf5-ba95-9c241324dc79" type="xs:unsignedByte" />
+                  <xs:element name="year_num" msprop:FriendlyName="year_num" msprop:DbColumnName="year_num" msprop:design-time-name="f813ca4f-8480-4b07-a406-054c20bd4962" type="xs:short" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Industry" msprop:DbTableName="Dim_Industry" msprop:FriendlyName="Dim_Industry" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="1ce5767c-4783-403f-8165-4d6e10e170d3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="industry_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="industry_key" msprop:DbColumnName="industry_key" msprop:design-time-name="da9b2146-061c-47d4-b886-6f4e35daf18b" type="xs:int" />
+                  <xs:element name="sector_name_vn" msprop:FriendlyName="sector_name_vn" msprop:DbColumnName="sector_name_vn" msprop:design-time-name="35815cfa-ec74-4959-829e-012b97737904">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sector_name_en" msprop:FriendlyName="sector_name_en" msprop:DbColumnName="sector_name_en" msprop:design-time-name="3309b083-a976-41ec-9ea1-f5dc834fe277" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sector_group" msprop:FriendlyName="sector_group" msprop:DbColumnName="sector_group" msprop:design-time-name="4acf0f02-80f2-4b00-a151-34cdd413f233" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Stock" msprop:DbTableName="Dim_Stock" msprop:FriendlyName="Dim_Stock" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="3cd00047-e7cb-4936-9b84-109722c80c42">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="stock_key" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="stock_key" msprop:DbColumnName="stock_key" msprop:design-time-name="9693cef8-ebb3-453f-9e3c-3227a3c40ffd" type="xs:int" />
+                  <xs:element name="ticker" msprop:FriendlyName="ticker" msprop:DbColumnName="ticker" msprop:design-time-name="d708ce3e-ed5c-48da-96c4-8cfb0a8ec6a9">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="company_name" msprop:FriendlyName="company_name" msprop:DbColumnName="company_name" msprop:design-time-name="4548cebd-687b-490e-857e-ec922e58ca69" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="risk_level" msprop:FriendlyName="risk_level" msprop:DbColumnName="risk_level" msprop:design-time-name="b1e188a3-8bae-405e-afa3-369961f038bb" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="industry_key" msprop:FriendlyName="industry_key" msprop:DbColumnName="industry_key" msprop:design-time-name="8b0859c7-8792-435d-a3c7-3fe41c76f502" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_DailyPrice" msprop:DbTableName="Fact_DailyPrice" msprop:FriendlyName="Fact_DailyPrice" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="60ea6f51-64a4-4685-83ad-12bf8ff56a70">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="date_key" msprop:FriendlyName="date_key" msprop:DbColumnName="date_key" msprop:design-time-name="6a68ca11-3b85-42e9-8f43-46c1d858e190" type="xs:int" />
+                  <xs:element name="stock_key" msprop:FriendlyName="stock_key" msprop:DbColumnName="stock_key" msprop:design-time-name="99123509-f80e-4677-8958-0b48ce52766c" type="xs:int" />
+                  <xs:element name="industry_key" msprop:FriendlyName="industry_key" msprop:DbColumnName="industry_key" msprop:design-time-name="6bcb14b7-f421-4676-98e1-6060756cc60d" type="xs:int" />
+                  <xs:element name="event_key" msprop:FriendlyName="event_key" msprop:DbColumnName="event_key" msprop:design-time-name="b3006e1d-f897-45f6-bf16-dad9c0261427" type="xs:int" />
+                  <xs:element name="volume" msprop:FriendlyName="volume" msprop:DbColumnName="volume" msprop:design-time-name="af6005b8-9605-4767-9a37-b3c0044c856b" type="xs:long" />
+                  <xs:element name="open_price" msprop:FriendlyName="open_price" msprop:DbColumnName="open_price" msprop:design-time-name="fb8aa374-53e0-44da-80ee-55c20a5151ff" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="close_price" msprop:FriendlyName="close_price" msprop:DbColumnName="close_price" msprop:design-time-name="7b608b78-15b6-4e86-9db9-03a5b2838629" type="xs:decimal" />
+                  <xs:element name="high_price" msprop:FriendlyName="high_price" msprop:DbColumnName="high_price" msprop:design-time-name="447f1b24-d2e0-438c-a122-d95a2b34d033" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="low_price" msprop:FriendlyName="low_price" msprop:DbColumnName="low_price" msprop:design-time-name="ce1b16e2-8dea-4e54-99ef-8640055eee4c" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="turnover_est_bn" msprop:FriendlyName="turnover_est_bn" msprop:DbColumnName="turnover_est_bn" msprop:design-time-name="6fe273a8-f9c4-4a34-8308-31b0aa4b5d11" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="pct_change_calc" msprop:FriendlyName="pct_change_calc" msprop:DbColumnName="pct_change_calc" msprop:design-time-name="e7e55479-9e30-49c5-b738-8354dc301449" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="volatility_index" msprop:FriendlyName="volatility_index" msprop:DbColumnName="volatility_index" msprop:design-time-name="acdeb527-0bbb-4c54-9ec3-87846189bc81" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="market_sentiment_index" msprop:FriendlyName="market_sentiment_index" msprop:DbColumnName="market_sentiment_index" msprop:design-time-name="f0ec92ed-ef6b-49c8-82d3-f832313d50a5" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="anomaly_count" msprop:FriendlyName="anomaly_count" msprop:DbColumnName="anomaly_count" msprop:design-time-name="05413e44-1ae5-4186-87d8-df6de24bc91b" type="xs:int" minOccurs="0" />
+                  <xs:element name="risk_score" msprop:FriendlyName="risk_score" msprop:DbColumnName="risk_score" msprop:design-time-name="2770f2bf-c859-4b4d-adb8-2e80b1e06cb9" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="max_drawdown_pct" msprop:FriendlyName="max_drawdown_pct" msprop:DbColumnName="max_drawdown_pct" msprop:design-time-name="4ce1709c-13b8-4b70-8a5b-770e417057ae" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="trough_price_index" msprop:FriendlyName="trough_price_index" msprop:DbColumnName="trough_price_index" msprop:design-time-name="6ae15ac3-655b-4408-8a72-1741219cbb0b" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="total_loss_value" msprop:FriendlyName="total_loss_value" msprop:DbColumnName="total_loss_value" msprop:design-time-name="2b827f81-5b33-4e31-8b2f-f021d50ad581" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="recovery_days" msprop:FriendlyName="recovery_days" msprop:DbColumnName="recovery_days" msprop:design-time-name="33b8f51a-80cd-48db-ad04-51065e52bc78" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_CrisisEvent" />
+          <xs:field xpath="event_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Date" />
+          <xs:field xpath="date_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Industry_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Industry" />
+          <xs:field xpath="industry_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Stock_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Stock" />
+          <xs:field xpath="stock_key" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_DailyPrice_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_DailyPrice" />
+          <xs:field xpath="date_key" />
+          <xs:field xpath="stock_key" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Dail__indus__5629CD9C" refer="dbo_Dim_Industry_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_DailyPrice" />
+          <xs:field xpath="industry_key" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Dail__stock__5535A963" refer="dbo_Dim_Stock_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_DailyPrice" />
+          <xs:field xpath="stock_key" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Dail__date___5441852A" refer="dbo_Dim_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_DailyPrice" />
+          <xs:field xpath="date_key" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Dail__event__571DF1D5" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_DailyPrice" />
+          <xs:field xpath="event_key" />
+        </xs:keyref>
+        <xs:keyref name="FK__Dim_Stock__indus__4F7CD00D" refer="dbo_Dim_Industry_Constraint1">
+          <xs:selector xpath=".//dbo_Dim_Stock" />
+          <xs:field xpath="industry_key" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <DW_x0020_Chung_x0020_Khoan_demo xmlns="" />
+  </Schema>
+</DataSourceView>

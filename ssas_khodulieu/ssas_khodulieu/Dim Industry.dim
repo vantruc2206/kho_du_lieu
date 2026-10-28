@@ -1,0 +1,157 @@
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d56a9c6a-be27-4821-8da1-dae4cfe71f73" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Industry</ID>
+  <Name>Dim Industry</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8a243446-0350-4ccb-b8c7-cbbc0a5ee9d6">
+    <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="1bad3cf1-2f10-42f7-837c-68b292a679d2">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="05a813a0-721e-418a-87ca-93d242351156">
+      <ID>Industry Key</ID>
+      <Name>Industry Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1a32312b-c8e7-4758-9493-92bdb3c35e18">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18df4ab3-3a22-4a38-ae76-c4d5bd32a0af">
+            <TableID>dbo_Dim_Industry</TableID>
+            <ColumnID>industry_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b1a8251f-63a1-4328-86d1-4bb248100221">
+          <AttributeID>Sector Name Vn</AttributeID>
+          <Name>Tên Ngành VN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c2a8251f-63a1-4328-86d1-4bb248100222">
+          <AttributeID>Sector Name En</AttributeID>
+          <Name>Tên Ngành EN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d3a8251f-63a1-4328-86d1-4bb248100223">
+          <AttributeID>Sector Group</AttributeID>
+          <Name>Nhóm Ngành</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1b12345-2222-3333-4444-555566667771">
+      <ID>Sector Name Vn</ID>
+      <Name>Tên Ngành VN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f2b12345-2222-3333-4444-555566667771">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b12345-2222-3333-4444-555566667771">
+            <TableID>dbo_Dim_Industry</TableID>
+            <ColumnID>sector_name_vn</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1b12345-2222-3333-4444-555566667772">
+      <ID>Sector Name En</ID>
+      <Name>Tên Ngành EN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f2b12345-2222-3333-4444-555566667772">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b12345-2222-3333-4444-555566667772">
+            <TableID>dbo_Dim_Industry</TableID>
+            <ColumnID>sector_name_en</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1b12345-2222-3333-4444-555566667773">
+      <ID>Sector Group</ID>
+      <Name>Nhóm Ngành</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f2b12345-2222-3333-4444-555566667773">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b12345-2222-3333-4444-555566667773">
+            <TableID>dbo_Dim_Industry</TableID>
+            <ColumnID>sector_group</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="f4f12345-8888-7777-6666-555544443331">
+      <ID>Hierarchy</ID>
+      <Name>Phân Cấp Ngành</Name>
+      <Levels>
+        <Level dwd:design-time-name="g5g12345-8888-7777-6666-555544443331">
+          <ID>Sector Group</ID>
+          <Name>Nhóm Ngành</Name>
+          <SourceAttributeID>Sector Group</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="g5g12345-8888-7777-6666-555544443332">
+          <ID>Sector Name Vn</ID>
+          <Name>Tên Ngành VN</Name>
+          <SourceAttributeID>Sector Name Vn</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
