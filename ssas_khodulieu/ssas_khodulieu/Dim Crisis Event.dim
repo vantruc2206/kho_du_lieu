@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dada644c-03a1-4a26-aac1-1b9c22047433" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6b8a6d05-7016-482b-9a67-24644b4df544" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Crisis Event</ID>
   <Name>Dim Crisis Event</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -6,32 +6,6 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
-      <Value>
-        <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-932" scrolltop="-5248" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="4904" y="13088" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
-            <font>
-              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
-            </font>
-            <mouseicon>
-              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
-            </mouseicon>
-          </diagram>
-          <layoutmanager>
-            <ddsxmlobj />
-          </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_CrisisEvent" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-            <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000210a0000" />
-            </control>
-            <layoutobject>
-              <ddsxmlobj>
-                <property name="LogicalObject" value="dbo_Dim_CrisisEvent" vartype="8" />
-              </ddsxmlobj>
-            </layoutobject>
-            <shape groupshapeid="0" groupnode="0" />
-          </ddscontrol>
-        </dds>
-      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -47,15 +21,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-932</Value>
+      <Value>0</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-5248</Value>
+      <Value>0</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>20</Value>
+      <Value>0</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -68,115 +42,127 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f1667a0a-547e-491d-99f3-422e12a0b196">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0a8f103e-b204-408c-bc73-d567ff22c45e">
     <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="4ebc5048-9f39-43eb-9342-d55a36756d92">
+  <ErrorConfiguration dwd:design-time-name="0781e930-0702-449c-80c2-e8087ab68321">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="d2765708-5a42-4153-b3ee-8939725343ab">
+    <Attribute dwd:design-time-name="3f1103ef-a5f2-4cce-8b94-65ad480cbc1b">
       <ID>Event Key</ID>
-      <Name>Event Key</Name>
+      <Name>Giai Đoạn Sự Kiện</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="3ccaae0f-b50d-4994-85e4-e7fd64937aa7">
+        <KeyColumn dwd:design-time-name="08469202-442a-49b4-8875-4bd2437df565">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="665e389b-5cc6-4ee1-b80d-cba9b17dde38">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6cb56c02-a85a-48bd-9c54-b8127a65db0c">
             <TableID>dbo_Dim_CrisisEvent</TableID>
             <ColumnID>event_key</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="name_event_key">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="nc_ev">
+          <TableID>dbo_Dim_CrisisEvent</TableID>
+          <ColumnID>phase</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="e9eecb4d-93f1-4c13-8d53-3287cb5cad6a">
+        <AttributeRelationship dwd:design-time-name="240face2-e9eb-4e7b-8ae1-3c8df6289c66">
           <AttributeID>Event Name</AttributeID>
-          <Name>Event Name</Name>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Tên Sự Kiện</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7a186af0-322d-4aca-9dca-cd3591a37c9a">
-          <AttributeID>Phase</AttributeID>
-          <Name>Phase</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="5fba8ef2-f662-436b-b3e6-67133d278f79">
+        <AttributeRelationship dwd:design-time-name="e067ee1e-9a5d-4132-9a1d-33ded497b844">
           <AttributeID>Phase Start</AttributeID>
           <Name>Phase Start</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="a20016cd-66ed-48c2-a0b9-3b8ddd5a26a3">
+        <AttributeRelationship dwd:design-time-name="2d8eba83-a761-4810-9f62-ebf464926595">
           <AttributeID>Phase End</AttributeID>
           <Name>Phase End</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="d34be6cb-66b8-4e5f-9ca0-a70a07fb3c0c">
+    <Attribute dwd:design-time-name="d1bd8e3d-0498-4fc4-9e0f-b90953b6887d">
       <ID>Event Name</ID>
-      <Name>Event Name</Name>
+      <Name>Tên Sự Kiện</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="b6b92741-a172-41a9-a4a1-80627389aff1">
+        <KeyColumn dwd:design-time-name="54289bcc-e17a-441f-af0c-aa7bc183a11e">
           <DataType>WChar</DataType>
           <DataSize>200</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="381bee72-d24c-47a8-a911-9e846a55adff">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c08f4b49-7fba-46be-803c-de40bb298a04">
             <TableID>dbo_Dim_CrisisEvent</TableID>
             <ColumnID>event_name</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="3d41038e-4c5b-42c3-a50f-d655e8658712">
-      <ID>Phase</ID>
-      <Name>Phase</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="7d79091d-5b87-4c3f-b36c-ec00f5ae8c9f">
-          <DataType>WChar</DataType>
-          <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7e06583-0a30-4b12-9bc9-75f98880784f">
-            <TableID>dbo_Dim_CrisisEvent</TableID>
-            <ColumnID>phase</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="b75c9535-8140-4ed9-bb7d-24fa1b997fc6">
+    <Attribute dwd:design-time-name="82a6bf6f-c32c-44b1-b0b6-b14a980e37f8">
       <ID>Phase Start</ID>
       <Name>Phase Start</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="9e1b73ae-aeab-4520-8b69-365172930341">
+        <KeyColumn dwd:design-time-name="aacdff77-7c7e-474c-ac6f-b049e02966af">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ccf1c676-b147-4f39-a247-2c7721fbeb22">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5850e7ea-c1e7-4470-859c-7366beb86b07">
             <TableID>dbo_Dim_CrisisEvent</TableID>
             <ColumnID>phase_start</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="ced27ff1-0c39-49c1-a041-0cea6d5a7b61">
+    <Attribute dwd:design-time-name="b2e67290-5776-468b-8f27-db94403afaf9">
       <ID>Phase End</ID>
       <Name>Phase End</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="e0d2168c-2b3c-42a2-9103-3395817e510c">
+        <KeyColumn dwd:design-time-name="0884abfd-3ea7-4961-8eed-9b2a76bb34bc">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="eb4cede0-9fc8-40e4-bf6b-76e0cca2f5e2">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="01317bcd-ea53-4166-b7b1-7c7903704f01">
             <TableID>dbo_Dim_CrisisEvent</TableID>
             <ColumnID>phase_end</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="h_crisis">
+      <ID>Hierarchy</ID>
+      <Name>Phân Cấp Khủng Hoảng</Name>
+      <Levels>
+        <Level dwd:design-time-name="l_ev_name">
+          <ID>Tên Sự Kiện</ID>
+          <Name>Tên Sự Kiện</Name>
+          <SourceAttributeID>Event Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="l_ev_phase">
+          <ID>Giai Đoạn Sự Kiện</ID>
+          <Name>Giai Đoạn</Name>
+          <SourceAttributeID>Event Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

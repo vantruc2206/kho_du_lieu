@@ -72,15 +72,13 @@
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="3176e64f-c551-4ebe-b0a9-a12fc41c9137">
           <AttributeID>Ticker</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Mã Cổ Phiếu</Name>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="4287e64f-c551-4ebe-b0a9-a12fc41c9138">
           <AttributeID>Company Name</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Tên Doanh Nghiệp</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="5398e64f-c551-4ebe-b0a9-a12fc41c9139">
-          <AttributeID>Risk Level</AttributeID>
-          <Name>Mức Độ Rủi Ro</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -106,7 +104,8 @@
     </Attribute>
     <Attribute dwd:design-time-name="c1c12345-3333-4444-5555-666677778881">
       <ID>Ticker</ID>
-      <Name>Mã Cổ Phiếu</Name>
+      <RelationshipType>Rigid</RelationshipType>
+          <Name>Mã Cổ Phiếu</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="d2c12345-3333-4444-5555-666677778881">
           <DataType>WChar</DataType>
@@ -117,13 +116,22 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="rel_tick_risk">
+          <AttributeID>Risk Level</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mức Độ Rủi Ro</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
     <Attribute dwd:design-time-name="c1c12345-3333-4444-5555-666677778882">
       <ID>Company Name</ID>
-      <Name>Tên Doanh Nghiệp</Name>
+      <RelationshipType>Rigid</RelationshipType>
+          <Name>Tên Doanh Nghiệp</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="d2c12345-3333-4444-5555-666677778882">
           <DataType>WChar</DataType>
@@ -140,7 +148,8 @@
     </Attribute>
     <Attribute dwd:design-time-name="c1c12345-3333-4444-5555-666677778883">
       <ID>Risk Level</ID>
-      <Name>Mức Độ Rủi Ro</Name>
+      <RelationshipType>Rigid</RelationshipType>
+          <Name>Mức Độ Rủi Ro</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="d2c12345-3333-4444-5555-666677778883">
           <DataType>WChar</DataType>
@@ -152,9 +161,30 @@
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="h_stock_risk">
+      <ID>Hierarchy</ID>
+      <Name>Phân Cấp Rủi Ro</Name>
+      <Levels>
+        <Level dwd:design-time-name="l_risk">
+          <ID>Risk Level</ID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mức Độ Rủi Ro</Name>
+          <SourceAttributeID>Risk Level</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="l_ticker">
+          <ID>Ticker</ID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mã Cổ Phiếu</Name>
+          <SourceAttributeID>Ticker</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

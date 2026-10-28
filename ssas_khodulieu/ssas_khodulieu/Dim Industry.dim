@@ -1,4 +1,4 @@
-<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d56a9c6a-be27-4821-8da1-dae4cfe71f73" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9887973d-8e00-4b6e-bf39-331edb8a9cbe" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Industry</ID>
   <Name>Dim Industry</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,72 +42,81 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8a243446-0350-4ccb-b8c7-cbbc0a5ee9d6">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2d06d2c2-df90-4127-bc22-a4e793436041">
     <DataSourceViewID>DW Chung Khoan_demo</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="1bad3cf1-2f10-42f7-837c-68b292a679d2">
+  <ErrorConfiguration dwd:design-time-name="b3d9efa9-25cf-410c-a206-ccc1122a3739">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="05a813a0-721e-418a-87ca-93d242351156">
+    <Attribute dwd:design-time-name="2ebfaeac-77c5-45fe-b737-ff310dc8acb5">
       <ID>Industry Key</ID>
       <Name>Industry Key</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="1a32312b-c8e7-4758-9493-92bdb3c35e18">
+        <KeyColumn dwd:design-time-name="2719cea8-fd66-40da-8168-66643ecfc160">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="18df4ab3-3a22-4a38-ae76-c4d5bd32a0af">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b7e909da-3f86-4e90-8d1a-946958c29420">
             <TableID>dbo_Dim_Industry</TableID>
             <ColumnID>industry_key</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="b1a8251f-63a1-4328-86d1-4bb248100221">
+        <AttributeRelationship dwd:design-time-name="773a6a33-28f9-4522-bc07-207aeb4540d2">
           <AttributeID>Sector Name Vn</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Tên Ngành VN</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="c2a8251f-63a1-4328-86d1-4bb248100222">
+        <AttributeRelationship dwd:design-time-name="9d42b5e7-3a22-4d12-85b7-ba0c07e181ac">
           <AttributeID>Sector Name En</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Tên Ngành EN</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="d3a8251f-63a1-4328-86d1-4bb248100223">
-          <AttributeID>Sector Group</AttributeID>
-          <Name>Nhóm Ngành</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="e1b12345-2222-3333-4444-555566667771">
+    <Attribute dwd:design-time-name="5643c51d-561e-4b41-a9b0-9c54050d18dd">
       <ID>Sector Name Vn</ID>
-      <Name>Tên Ngành VN</Name>
+      <RelationshipType>Rigid</RelationshipType>
+          <Name>Tên Ngành VN</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="f2b12345-2222-3333-4444-555566667771">
+        <KeyColumn dwd:design-time-name="b62e1e08-2399-4b24-935f-27c76c4a5b71">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b12345-2222-3333-4444-555566667771">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="55526ae9-33db-47cb-aa40-cbc8b651ce30">
             <TableID>dbo_Dim_Industry</TableID>
             <ColumnID>sector_name_vn</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="rel_vn_to_grp">
+          <AttributeID>Sector Group</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Nhóm Ngành</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="e1b12345-2222-3333-4444-555566667772">
+    <Attribute dwd:design-time-name="bdf0effc-4b9e-46fb-a3d5-bd4f05fa2dcc">
       <ID>Sector Name En</ID>
-      <Name>Tên Ngành EN</Name>
+      <RelationshipType>Rigid</RelationshipType>
+          <Name>Tên Ngành EN</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="f2b12345-2222-3333-4444-555566667772">
+        <KeyColumn dwd:design-time-name="6c2698ce-956e-4957-91fa-78f35eb9e6bd">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b12345-2222-3333-4444-555566667772">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="73de7773-04e1-46a8-be6c-a7e9df35531d">
             <TableID>dbo_Dim_Industry</TableID>
             <ColumnID>sector_name_en</ColumnID>
           </Source>
@@ -117,36 +126,40 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="e1b12345-2222-3333-4444-555566667773">
+    <Attribute dwd:design-time-name="b0dc8c23-c0b2-4a02-9980-339509637f52">
       <ID>Sector Group</ID>
-      <Name>Nhóm Ngành</Name>
+      <RelationshipType>Rigid</RelationshipType>
+          <Name>Nhóm Ngành</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="f2b12345-2222-3333-4444-555566667773">
+        <KeyColumn dwd:design-time-name="e30011e5-3f5a-4d7a-b7fc-d1d9fec4f816">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3b12345-2222-3333-4444-555566667773">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c50ca2b-0177-4314-839b-2f96f6abcdb0">
             <TableID>dbo_Dim_Industry</TableID>
             <ColumnID>sector_group</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="f4f12345-8888-7777-6666-555544443331">
+    <Hierarchy dwd:design-time-name="735c5129-6ef1-4fed-bd52-50a04910c09a">
       <ID>Hierarchy</ID>
       <Name>Phân Cấp Ngành</Name>
       <Levels>
-        <Level dwd:design-time-name="g5g12345-8888-7777-6666-555544443331">
+        <Level dwd:design-time-name="a07c0428-8460-4ffd-b7da-d1f2a447a8a1">
           <ID>Sector Group</ID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Nhóm Ngành</Name>
           <SourceAttributeID>Sector Group</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="g5g12345-8888-7777-6666-555544443332">
+        <Level dwd:design-time-name="b0812c89-2dd5-4df4-a66a-727e597a75c6">
           <ID>Sector Name Vn</ID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>Tên Ngành VN</Name>
           <SourceAttributeID>Sector Name Vn</SourceAttributeID>
         </Level>
