@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{44D35E6A-01CD-4286-AFB6-A572F61A747E}">
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{37EC77DB-EE25-4149-879A-A4639D44F987}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4953,7 +4953,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:refId="Package\staging"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{067DC034-8E40-4166-AA5C-CF6782D97F82}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -6393,7 +6392,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.3919429190954,5,96.3827734375,11.609375"
+              BoundingBox="15.3919429190955,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6520,7 +6519,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="16.1082121890063,5,96.3827734375,11.609375"
+              BoundingBox="16.1082121890065,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6645,10 +6644,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="124,42.6666666666667"
-          Id="Package\staging\Stg_price"
-          TopLeft="24.9999991804362,189.883324338595" />
-        <NodeLayout
           Size="133.333333333334,42.6666666666667"
           Id="Package\staging\csv nghành"
           TopLeft="224.999989941716,16.8999991941452" />
@@ -6657,35 +6652,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Id="Package\staging\csv 2002-2025"
           TopLeft="17.3749994691462,17.8499994111061" />
         <NodeLayout
+          Size="124,42.6666666666667"
+          Id="Package\staging\Stg_price"
+          TopLeft="24.9999991804362,189.883324338595" />
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\staging\Conditional Split"
+          TopLeft="10.4999997764826,95.8499956917764" />
+        <NodeLayout
           Size="129.333333333334,42.6666666666667"
           Id="Package\staging\Stg_Ticker"
           TopLeft="230.916656711449,102.68332842509" />
         <EdgeLayout
-          Id="Package\staging.Paths[Flat File Source Output]"
-          TopLeft="293.624989993249,59.5666658608119">
+          Id="Package\staging.Paths[Lay_Tu_2010]"
+          TopLeft="87.7499994784594,138.516662358443">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43.1166625642776"
+              EndConnector="0,51.3666619801523"
               Start="0,0"
-              End="0,35.6166625642776">
+              End="0,43.8666619801523">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.6166625642776" />
+                    End="0,43.8666619801523" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-30.123203125,16.2165341150761,60.24640625,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="156,42.6666666666667"
-          Id="Package\staging\Conditional Split"
-          TopLeft="10.4999997764826,95.8499956917764" />
         <EdgeLayout
           Id="Package\staging.Paths[Flat File Source Output1]"
           TopLeft="89.9374996228144,60.5166660777728">
@@ -6709,27 +6710,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\staging.Paths[Lay_Tu_2010]"
-          TopLeft="87.7499994784594,138.516662358443">
+          Id="Package\staging.Paths[Flat File Source Output]"
+          TopLeft="293.624989993249,59.5666658608119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.3666619801523"
+              EndConnector="0,43.1166625642776"
               Start="0,0"
-              End="0,43.8666619801523">
+              End="0,35.6166625642776">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.8666619801523" />
+                    End="0,35.6166625642776" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-30.123203125,16.2165341150761,60.24640625,11.43359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
