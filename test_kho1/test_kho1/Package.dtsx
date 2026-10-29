@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="58"
-  DTS:VersionGUID="{38E4B25E-2F4D-4965-B7D5-2AC24A481DBC}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{44D35E6A-01CD-4286-AFB6-A572F61A747E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -192,7 +192,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;User ID=;Initial Catalog=DW_ChungKhoan;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2061D661-6A3F-4622-8543-845D60F2959B}Data Connection;Initial File Name=;Use Encryption for Data=optional;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;" />
+          DTS:ConnectionString="Data Source=.\SQLEXPRESS;User ID=;Initial Catalog=DW_ChungKhoan;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{2061D661-6A3F-4622-8543-845D60F2959B}Data Connection;Initial File Name=;Use Encryption for Data=optional;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -204,7 +204,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=Kho_du_lieu_staging;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{CDBC410C-CABE-406B-9B8B-9CF4C7BA0FC7}localhost\SQLEXPRESS;Use Encryption for Data=Optional;Trust Server Certificate=True;" />
+          DTS:ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Kho_du_lieu_staging;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{CDBC410C-CABE-406B-9B8B-9CF4C7BA0FC7}localhost\SQLEXPRESS;Use Encryption for Data=Optional;Trust Server Certificate=True;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -4953,6 +4953,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       DTS:refId="Package\staging"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{067DC034-8E40-4166-AA5C-CF6782D97F82}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
